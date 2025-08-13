@@ -1,0 +1,32 @@
+.bow-rain-container {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bow-rain-item {
+  position: absolute;
+  top: -40px;
+  will-change: transform;
+  animation: bow-fall linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes bow-fall {
+  0% {
+    transform: translateY(0) rotate(-10deg) scale(var(--scale, 1));
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(20deg) scale(var(--scale, 1));
+    opacity: 0.2;
+  }
+}

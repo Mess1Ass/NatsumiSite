@@ -1,0 +1,70 @@
+.home-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  overflow: hidden;
+}
+
+.home-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #f06292;
+  text-shadow: 0 4px 24px #f8bbd0cc, 0 2px 8px #f0629244;
+  margin-bottom: 48px;
+  letter-spacing: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  padding: 16px 48px;
+  box-shadow: 0 2px 8px #f8bbd044;
+  transform: translateY(-100vh);
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+              opacity 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.title-drop-animation {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+/* 游戏风格按钮 */
+.game-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  margin: 16px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #f06292 0%, #f8bbd0 100%);
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 4px 16px #f8bbd088, 0 2px 8px #f0629244;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  outline: none;
+  letter-spacing: 2px;
+  user-select: none;
+}
+.game-btn:hover {
+  transform: scale(1.08) translateY(-4px);
+  background: linear-gradient(90deg, #f8bbd0 0%, #f06292 100%);
+  box-shadow: 0 8px 24px #f8bbd0cc, 0 4px 16px #f0629299;
+}
+.game-btn:active {
+  transform: scale(0.97) translateY(2px);
+  background: linear-gradient(90deg, #f06292 0%, #f8bbd0 100%);
+  box-shadow: 0 2px 4px #f0629244;
+}
