@@ -3,9 +3,9 @@ import { Layout, Nav, Button } from '@douyinfe/semi-ui';
 import { IconMenu, IconClose } from '@douyinfe/semi-icons';
 import { useNavigate, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
-// import Focus from './pages/Focus';
-// import Calendar from './pages/Calendar';
-// import About from './pages/About';
+import Focus from './pages/Focus';
+import Calendar from './pages/Calendar';
+import About from './pages/About';
 import { getCurrentDomainConfig } from './config';
 import DomainInfo from './components/DomainInfo';
 import BowRain from './components/BowRain';
@@ -108,7 +108,7 @@ function App() {
   return (
     <Layout 
       className={`app-${domainConfig.theme}`}
-      style={{ minHeight: '100vh', background: '#f5f7fa', width: '100vw', maxWidth: '100dvw', margin: '0 auto', overflowX: 'hidden' }}
+      style={{ minHeight: '100vh', background: 'transparent', width: '100vw', maxWidth: '100dvw', margin: '0 auto', overflowX: 'hidden' }}
     >
       {/* 全局蝴蝶结雨背景 */}
       <BowRain count={24} />
@@ -133,7 +133,7 @@ function App() {
           MozUserSelect: 'none',
           msUserSelect: 'none'
         }}>
-          <img src="/assets/Home/NerukoAvatar.jpg" alt="logo" style={{ width: 36, height: 36, borderRadius: '50%', marginRight: 12, objectFit: 'cover' }} />
+          <img src="/assets/NatsumiAvatar.JPG" alt="logo" style={{ width: 36, height: 36, borderRadius: '50%', marginRight: 12, objectFit: 'cover' }} />
           <span style={{ fontWeight: 700, fontSize: 22, letterSpacing: 1 }}>{getSiteTitle()}</span>
         </div>
         {/* 中间Nav菜单，PC端显示，绝对居中 */}
@@ -178,9 +178,9 @@ function App() {
       <Content style={{ padding: 0, margin: '0 auto', width: '100vw', boxSizing: 'border-box' }}>
         <Routes>
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/focus" element={<Focus />} />
+          <Route path="/focus" element={<Focus />} />
           <Route path="/calendar" element={<Calendar />} />
-          <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<About />} />
           {/* 其他路由 */}
         </Routes>
       </Content>
