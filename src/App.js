@@ -51,9 +51,9 @@ function App() {
   // 菜单项
   const navItems = [
     { itemKey: '/home', text: '首页' },
+    { itemKey: '/calendar', text: '演出日历' },
+    { itemKey: '/about', text: '偶像经历' },
     // { itemKey: '/focus', text: '直拍链接合集' },
-    // { itemKey: '/calendar', text: '演出日历' },
-    // { itemKey: '/about', text: '关于' },
     
     // 可继续添加更多菜单项 
   ];
@@ -110,8 +110,8 @@ function App() {
       className={`app-${domainConfig.theme}`}
       style={{ minHeight: '100vh', background: 'transparent', width: '100vw', maxWidth: '100dvw', margin: '0 auto', overflowX: 'hidden' }}
     >
-      {/* 全局蝴蝶结雨背景 */}
-      <BowRain count={24} />
+      {/* 全局蝴蝶结雨背景 - 只在首页显示 */}
+      {location.pathname === '/home' && <BowRain count={24} />}
       <Header
         style={{
           background: '#fff',

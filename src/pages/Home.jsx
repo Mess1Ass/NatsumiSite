@@ -20,9 +20,9 @@ const Home = () => {
         <button className="game-btn" onClick={() => navigate('/about')}>
           偶像经历
         </button>
-        {/* <button className="game-btn" onClick={() => navigate('/focus')}>
-          直拍链接
-        </button> */}
+        <button className="game-btn" onClick={() => navigate('/calendar')}>
+          演出日历
+        </button>
       </div>
     </div>
   );
